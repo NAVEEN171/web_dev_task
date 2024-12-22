@@ -195,11 +195,11 @@ const hideNavbar=()=>{
 
                             <div  onClick={()=>{hideNavbar()}} className={`flex pl-[10px]   gap-[10px] items-center cursor-pointer rounded-md`}>
                                 <img className='w-[24px] h-[24px]' src={"./Images/phone.svg"} alt="Contact" />
-                                <div className={` py-[7px]  font-inter   font-semibold leading-[24px] `}>Contact</div>
+                                <div className={` py-[10px]  font-inter   font-semibold leading-[24px] `}>Contact</div>
                             </div>
                            <span onClick={()=>{navigate("/Login")}}> <div className={`flex  pl-[10px]    gap-[10px] items-center cursor-pointer rounded-md`}>
                                 <img className='w-[24px] h-[24px]' src={"./Images/sign-out.svg"} alt="Logout" />
-                                <div className={` py-[7px]  font-inter   font-semibold leading-[24px] `}>Logout</div>
+                                <div className={` py-[10px]  font-inter   font-semibold leading-[24px] `}>Logout</div>
                             </div></span>
 
 
