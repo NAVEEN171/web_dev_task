@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Signupoptions={
     "SAAS":[
-        {option:"Sign in with Github",icon:"./images/github.svg"},
-        {option:"Sign in with Bitbucket",icon:"./images/bigbucket.svg"},
-        {option:"Sign in with Azure Devops",icon:"./images/azure.svg"},
-        {option:"Sign in with Gitlab",icon:"./images/gitlab.svg"},
+        {option:"Sign in with Github",icon:"./Images/github.svg"},
+        {option:"Sign in with Bitbucket",icon:"./Images/bigbucket.svg"},
+        {option:"Sign in with Azure Devops",icon:"./Images/azure.svg"},
+        {option:"Sign in with Gitlab",icon:"./Images/gitlab.svg"},
     ],
     "Self Hosted":[
-        {option:"Self Hosted GitLab",icon:"./images/gitlab.svg"},
-        {option:"Sign in with SSO",icon:"./images/key.svg"},
+        {option:"Self Hosted GitLab",icon:"./Images/gitlab.svg"},
+        {option:"Sign in with SSO",icon:"./Images/key.svg"},
       
     ]
 }
@@ -38,12 +38,12 @@ function Login() {
                 <div className='circle-wrapper md:px-[20px]  lg:px-[32px] py-[15px]  flex flex-col gap-[10px] ' >
                     <div className='flex gap-[60px] items-center'>
                 <div className='circle flex items-center justify-center w-[56px] h-[56px] rounded-[50%] bg-[#e6e3fd]'>
-                <img  className='' src="./images/circles.svg" alt="Circles Icon"/>
+                <img  className='' src="./Images/circles.svg" alt="Circles Icon"/>
 
                 </div>
                 <div className='hike-container'>
                     <div className='hike-shower flex gap-[5px] items-center'>
-                        <img src="./images/up_arrow.svg" alt="Up Arrow"/>
+                        <img src="./Images/up_arrow.svg" alt="Up Arrow"/>
                         <div className='font-inter font-bold text-[14px] text-custom-blue leading-[20px]'>14%</div>
                     </div>
                     <div className='font-inter leading-normal text-[12px] leading-[16px]'>This week</div>
@@ -58,7 +58,7 @@ function Login() {
                 
             </div>
         <div className='heading-container border-b border-[rgba(230,232,240,1)] flex gap-[8px] items-center py-[15px] pl-[20px] pr-[30px]'>
-        <img  className='' src="./images/codeant_logo_dark.svg" alt="CodeAnt Logo Dark"/>
+        <img  className='' src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo Dark"/>
 
             <div className='font-inter text-[18px] font-bold leading-[27px] '>AI to Detect & Autofix Bad Code</div>
 
@@ -79,7 +79,7 @@ function Login() {
         </div>
         </div>
        
-        <img width="284px" height="319px" className='absolute bottom-0 left-0' src="./images/codeant_logo.png" alt="CodeAnt Logo"/>
+        <img width="284px" height="319px" className='absolute bottom-0 left-0' src="./Images/codeant_logo.png" alt="CodeAnt Logo"/>
         </div>
         
         <div className='right-container  w-full  md:w-1/2 h-full flex items-center justify-center' >
@@ -89,7 +89,7 @@ function Login() {
                 <div className='right-cont-up  border-b border- rgba(216, 218, 229)] flex flex-col items-center '>
                     <div className='flex flex-col items-center xs:gap-[24px] gap-[36px]'>
                     <div className='flex items-center gap-[10px] pt-[30px]'>
-                    <img src="./images/codeant_logo_dark.svg" alt="CodeAnt Logo Dark"/>
+                    <img src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo Dark"/>
                     <header className=' font-sans-serif title text-[30px] leading-[33px]  '>CodeAnt AI</header>
                     </div>
                     <div className='font-inter font-semibold text-[28px] sm:text-[29px]  lg:text-[32px] leading-[48px]'>Welcome to CodeAnt AI</div>

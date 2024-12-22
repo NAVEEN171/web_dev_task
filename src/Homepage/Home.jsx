@@ -150,7 +150,7 @@ const hideNavbar=()=>{
             <div className={`absolute h-[calc(100%-62px)]  w-full top-[62px] md:hidden bg-[#000000B3]  ${opennavbar?'block':'hidden'} `}></div>
             <div className='xs:w-[92%] w-[95%] md:hidden  flex  justify-between items-center py-[15px]'>
             <div className='flex items-center   gap-[10px] '>
-                            <img className='w-[29px] h-[32px]' src="./images/codeant_logo_dark.svg" alt="CodeAnt Logo" />
+                            <img className='w-[29px] h-[32px]' src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo" />
                             <header className=' font-sans-serif font-normal title text-[24px] leading-[27px]  '>CodeAnt AI</header>
                         </div>
                         <div onClick={()=>{navbarhandler()}} className={`menu flex flex-col gap-[5px] cursor-pointer`}>
@@ -163,7 +163,7 @@ const hideNavbar=()=>{
                 <div className='flex flex-col xs:w-[92%] w-[80%] justify-between h-full'>
                     <div className='flex flex-col '>
                         <div className='md:flex items-center gap-[10px] hidden pt-[15px] md:pt-[30px]'>
-                            <img className='w-[29px] h-[32px]' src="./images/codeant_logo_dark.svg" alt="CodeAnt Logo" />
+                            <img className='w-[29px] h-[32px]' src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo" />
                             <header className=' font-sans-serif font-normal title text-[24px] leading-[27px]  '>CodeAnt AI</header>
                         </div>
                         <div onClick={() => { setshow(!show) }} className='drop-down  hover:bg-gray-100 mt-[20px] cursor-pointer  relative w-full rounded-md py-[5px] px-[10px] flex gap-[10px] justify-between items-center border border-[ #D6D7DA]'>
