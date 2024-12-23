@@ -272,14 +272,14 @@ const hideNavbar=()=>{
                                                 </div>
                                                 <div className='flex gap-[40px] xs:gap-[24px] xxs:gap-[18px] ss:gap-[15px]  items-center'>
                                                     <div className='flex gap-[8px] items-center'>
-                                                        <div className='h-[24px] w-[80px] bg-gray-200 w-[30px] font-inter rounded'>
+                                                        <div className='h-[24px] xxs:w-[60px] w-[80px] bg-gray-200 w-[30px] font-inter rounded'>
                                                         </div>
                                                     </div>
                                                     <div className='flex gap-[8px] items-center'>
-                                                        <div className='h-[24px] w-[80px] bg-gray-200 rounded '>
+                                                        <div className='h-[24px] xxs:w-[60px] w-[80px] bg-gray-200 rounded '>
                                                         </div>
                                                     </div>
-                                                    <div className='h-[24px] w-[180px] bg-gray-200 rounded'></div>
+                                                    <div className='h-[24px] xxs:w-[145px] w-[180px] bg-gray-200 rounded'></div>
                                                 </div>
                                             </div>
                                         </div>)
