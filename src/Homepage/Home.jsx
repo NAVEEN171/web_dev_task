@@ -268,17 +268,15 @@ const hideNavbar=()=>{
                                             <div className='one-repo px-[24px] flex flex-col gap-[12px]  '>
                                                 <div className='flex gap-[8px] items-center'>
                                                     <div className=' w-[120px] h-[24px] bg-gray-200 rounded'></div>
-                                                    <div className='w-[60px] h-[20px] bg-blue-100   rounded-full '></div>
+                                                    <div className='w-[60px] h-[25px] bg-blue-100   rounded-full '></div>
                                                 </div>
                                                 <div className='flex gap-[40px] xs:gap-[24px] xxs:gap-[18px] ss:gap-[15px]  items-center'>
                                                     <div className='flex gap-[8px] items-center'>
-                                                        <div className='h-[24px] w-[60px] bg-gray-200 w-[30px] font-inter rounded'>
+                                                        <div className='h-[24px] w-[80px] bg-gray-200 w-[30px] font-inter rounded'>
                                                         </div>
-                                                        <div className='circle w-[10px] h-[10px] bg-gray-200 rounded-[50%] '></div>
                                                     </div>
                                                     <div className='flex gap-[8px] items-center'>
-                                                        <div className='w-[13px] h-[13px] bg-gray-200 '></div>
-                                                        <div className='h-[24px] w-[60px] bg-gray-200 rounded '>
+                                                        <div className='h-[24px] w-[80px] bg-gray-200 rounded '>
                                                         </div>
                                                     </div>
                                                     <div className='h-[24px] w-[180px] bg-gray-200 rounded'></div>
