@@ -6,11 +6,11 @@ const Signupoptions={
         {option:"Sign in with Github",icon:"./Images/github.svg"},
         {option:"Sign in with Bitbucket",icon:"./Images/bigbucket.svg"},
         {option:"Sign in with Azure Devops",icon:"./Images/azure.svg"},
-        {option:"Sign in with Gitlab",icon:"./Images/gitlab.svg"},
+        {option:"Sign in with Gitlab",icon:"./Images/gitlab.svg"}
     ],
     "Self Hosted":[
         {option:"Self Hosted GitLab",icon:"./Images/gitlab.svg"},
-        {option:"Sign in with SSO",icon:"./Images/key.svg"},
+        {option:"Sign in with SSO",icon:"./Images/key.svg"}
       
     ]
 }
@@ -57,7 +57,7 @@ function Login() {
                 
                 
             </div>
-        <div className='heading-container border-b border-[rgba(230,232,240,1)] flex gap-[8px] items-center py-[15px] pl-[20px] pr-[30px]'>
+        <div className='heading-container border-b border-[#E9EAEB] flex gap-[8px] items-center py-[15px] pl-[20px] pr-[30px]'>
         <img  className='' src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo Dark"/>
 
             <div className='font-inter text-[18px] font-bold leading-[27px] '>AI to Detect & Autofix Bad Code</div>
@@ -84,9 +84,9 @@ function Login() {
         
         <div className='right-container  w-full  md:w-1/2 h-full flex items-center justify-center' >
         <div className='flex flex-col xs:w-[90%] w-[85%] gap-[15px] '>
-            <div className='h-[570px]  border border-[rgb(213, 215, 218)] rounded-xl   '>
+            <div className='h-[570px]  border border-[#E9EAEB] rounded-xl   '>
                 <div>
-                <div className='right-cont-up  border-b border- rgba(216, 218, 229)] flex flex-col items-center '>
+                <div className='right-cont-up  border-b border-[#E9EAEB] flex flex-col items-center '>
                     <div className='flex flex-col items-center xs:gap-[24px] gap-[36px]'>
                     <div className='flex items-center gap-[10px] pt-[30px]'>
                     <img src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo Dark"/>
@@ -94,7 +94,7 @@ function Login() {
                     </div>
                     <div className='font-inter font-semibold text-[28px] sm:text-[29px]  lg:text-[32px] leading-[48px]'>Welcome to CodeAnt AI</div>
                     </div>
-                    <div className='xs:w-[92%] buttons-container  rounded-md border w-[85%] border-[rgb(233, 234, 235)] mt-[20px] mb-[25px]'>
+                    <div className='xs:w-[92%] buttons-container  rounded-md border w-[85%] border-[#E9EAEB] mt-[20px] mb-[25px]'>
                         <button onClick={()=>{selectOption("SAAS")}} className={`${option==="SAAS"?'bg-button-color  text-white':'bg-white text-grey-variant'}  rounded-[8px] py-[12px] w-1/2 font-inter font-semibold leading-[28px] text-[20px] hover:bg-gray-10`}>SAAS</button>
                         <button onClick={()=>{selectOption("Self Hosted")}} className={` ${option==="Self Hosted"?'bg-button-color text-white':'bg-white text-grey-variant'}    rounded-[8px] py-[12px] w-1/2 font-inter font-semibold leading-[28px] text-[20px] hover:bg-gray-10`}>Self Hosted</button>
                     </div>
@@ -103,7 +103,7 @@ function Login() {
                     <div className='signup-options w-[92%] ssm:w-[80%]  lg:w-[68%] flex flex-col gap-[15px]'>
                         {
                             currentSignups.map((option)=>(
-                                <span key={option.option} onClick={()=>{navigate("/")}}><div onClick={()=>{setloggedIn()}}   className='signup-wrapper  cursor-pointer flex gap-[15px] py-[16px] justify-center border border- rgba(216, 218, 229)] rounded-[8px]'>
+                                <span key={option.option} onClick={()=>{navigate("/")}}><div onClick={()=>{setloggedIn()}}   className='signup-wrapper  cursor-pointer flex gap-[15px] py-[16px] justify-center border border-[#E9EAEB] rounded-[8px]'>
                                     <img className='w-[25px] h-[25px]' src={option.icon} alt={option.option}/>
                                     <div className='font-inter font-semibold  leading-[24px]'>{option.option}</div>
                                 </div></span>
