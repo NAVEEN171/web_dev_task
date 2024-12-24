@@ -2,7 +2,7 @@ import StatsPopup from './StatsPopup';
 import InfoMetrics from './InfoMetrics';
 
 const LeftPanel = () => (
-  <div className='hidden md:flex left-container w-1/2 h-full relative border-r border-[#E5E5E5] bg-white border-gray-500 justify-center pt-[150px]'>
+  <div className='hidden md:flex left-container w-1/2 h-full relative border-r border-[#E5E5E5] bg-white  justify-center pt-[150px]'>
     <div className='relative rounded-[24px] shadow-custom w-fit h-fit py-[10px] z-20'>
       <StatsPopup />
       <div className='heading-container border-b border-[#E9EAEB] flex gap-[8px] items-center py-[15px] pl-[20px] pr-[30px]'>
