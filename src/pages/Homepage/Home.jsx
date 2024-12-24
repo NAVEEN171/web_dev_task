@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Reposstore } from '../contexts/Reposstore';
-import "../App.css"
+import { Reposstore } from '../../contexts/Reposstore';
+import "../../App.css"
 import Sidebar from './components/Sidebar/Sidebar';
 import Repositories from './components/Features/Repositories/Repositories';
-import { users } from '../constants/auth/users';
-import { navbarOptions } from '../constants/navigation/options';
+import { users } from '../../constants/auth/users';
+import { navbarOptions } from '../../constants/navigation/options';
 import Info from './components/Features/Info/Info';
 import Settings from './components/Features/Settings/Settings';
 import Cloudsecurity from './components/Features/Cloudsecurity/Cloudsecurity';

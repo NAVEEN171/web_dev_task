@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
-import Skeletonloader from '../../../../components/Skeletonloader/Skeletonloader';
-import { Reposstore } from '../../../../contexts/Reposstore';
-import { data } from '../../../../constants/repositories/data';
+import Skeletonloader from '../../../../../components/Skeletonloader/Skeletonloader';
+import { Reposstore } from '../../../../../contexts/Reposstore';
+import { data } from '../../../../../constants/repositories/data';
 
 
 const Repositories = () => {

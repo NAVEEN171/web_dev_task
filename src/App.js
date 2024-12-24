@@ -1,14 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Login from "./Loginpage/Login";
-import Home from "./Homepage/Home";
+import Login from "./pages/Loginpage/Login";
+import Home from "./pages/Homepage/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Settings from "./Homepage/components/Features/Settings/Settings";
-import Repositories from "./Homepage/components/Features/Repositories/Repositories";
-import AicodeReview from "./Homepage/components/Features/CodeReview/AicodeReview";
-import Cloudsecurity from "./Homepage/components/Features/Cloudsecurity/Cloudsecurity";
-import Info from "./Homepage/components/Features/Info/Info";
-import Support from "./Homepage/components/Features/Support/Support";
+import Settings from "./pages/Homepage/components/Features/Settings/Settings";
+import Repositories from "./pages/Homepage/components/Features/Repositories/Repositories";
+import AicodeReview from "./pages/Homepage/components/Features/CodeReview/AicodeReview";
+import Cloudsecurity from "./pages/Homepage/components/Features/Cloudsecurity/Cloudsecurity";
+import Info from "./pages/Homepage/components/Features/Info/Info";
+import Support from "./pages/Homepage/components/Features/Support/Support";
 
 function App() {
   return (

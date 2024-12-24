@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import LeftPanel from './components/Leftpanel';
-import { Signupoptions } from '../constants/Signups/Signupoptions';
+import { Signupoptions } from '../../constants/Signups/Signupoptions';
 
 
 
