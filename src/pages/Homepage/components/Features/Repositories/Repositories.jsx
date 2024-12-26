@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react'
 import Skeletonloader from '../../../../../components/Skeletonloader/Skeletonloader';
-import { Reposstore } from '../../../../../contexts/Reposstore';
+import { ReposStoreContext } from '../../../../../contexts/Reposstore';
 import { data } from '../../../../../constants/repositories/data';
 
 
 const Repositories = () => {
-    const [currentrepos, setcurrentrepos] = useState(data);
-    const [reposearch, setreposearch] = useState("");
-    const { loaded, setloaded, repoactive, setrepoactive } = useContext(Reposstore);
+    const [currentRepos, setCurrentRepos] = useState(data);
+    const [repoSearch, setRepoSearch] = useState("");
+    const { loaded, setLoaded, repoActive, setRepoActive } = useContext(ReposStoreContext);
 
     useEffect(() => {
 
-        setcurrentrepos((data.filter((repo) => (repo.name.toLowerCase().includes(reposearch.toLowerCase())))));
+        setCurrentRepos((data.filter((repo) => (repo.name.toLowerCase().includes(repoSearch.toLowerCase())))));
 
-    }, [reposearch]);
+    }, [repoSearch]);
 
     return (
         <div className='xs:w-[100%] w-[95%] h-[95%] rounded-xl border border-[#E9EAEB]'>
@@ -25,22 +25,22 @@ const Repositories = () => {
                             <div className='font-inter w-fit font-normal leading-[20px] text-gray-800'>{data.length} total repositories</div>
                         </div>
                         <div className='flex gap-[12px] '>
-                            <button onClick={() => { setrepoactive("Refresh All"); setloaded(false) }} className={`${repoactive === "Refresh All" ? 'bg-button-color text-white   ' : 'border-[#E9EAEB]'}  flex gap-[10px] py-[10px] font-normal font-inter text-[14px] border  leading-[20px] rounded-md px-[14px] items-center`}>
-                                <img className={`${repoactive === "Refresh All" ? 'brightness-0 invert' : ''} w-[20px] h-[20px]  ${loaded === false ? 'animate-rotate-slow' : ''}`} src="./Images/refresh.svg" alt="Refresh"></img>Refresh All</button>
-                            <button onClick={() => { setrepoactive("Add Repository") }} className={`${repoactive === "Add Repository" ? 'bg-button-color text-white ' : ''} flex gap-[10px] py-[10px] font-normal font-inter text-[14px] border border-[#E9EAEB] leading-[20px] rounded-md px-[14px] items-center`}>
-                                <img className={`${repoactive === "Add Repository" ? 'brightness-0 invert' : ''} w-[20px] h-[20px]`} src="./Images/plus.svg" alt="Add"></img>Add Repository</button>
+                            <button onClick={() => { setRepoActive("Refresh All"); setLoaded(false) }} className={`${repoActive === "Refresh All" ? 'bg-button-color text-white   ' : 'border-[#E9EAEB]'}  flex gap-[10px] py-[10px] font-normal font-inter text-[14px] border  leading-[20px] rounded-md px-[14px] items-center`}>
+                                <img className={`${repoActive === "Refresh All" ? 'brightness-0 invert' : ''} w-[20px] h-[20px]  ${loaded === false ? 'animate-rotate-slow' : ''}`} src="./Images/refresh.svg" alt="Refresh"></img>Refresh All</button>
+                            <button onClick={() => { setRepoActive("Add Repository") }} className={`${repoActive === "Add Repository" ? 'bg-button-color text-white ' : ''} flex gap-[10px] py-[10px] font-normal font-inter text-[14px] border border-[#E9EAEB] leading-[20px] rounded-md px-[14px] items-center`}>
+                                <img className={`${repoActive === "Add Repository" ? 'brightness-0 invert' : ''} w-[20px] h-[20px]`} src="./Images/plus.svg" alt="Add"></img>Add Repository</button>
                         </div>
                     </div>
                     <div className=' xs:w-[100%] w-[350px]   flex self-start gap-[10px] py-[10px] px-[14px] rounded-md border border-[rgba(233, 234, 235, 1)]'>
                         <img src="./Images/search.svg" alt="Search"></img>
-                        <input onChange={(e) => { setreposearch(e.target.value) }} className='outline-none  w-[70%]' placeholder="Search Repositories"></input>
+                        <input onChange={(e) => { setRepoSearch(e.target.value) }} className='outline-none  w-[70%]' placeholder="Search Repositories"></input>
 
                     </div>
                 </div>
             </div>
             <div className='repos-list-container xs:h-[calc(100%-197px)] overflow-y-auto h-[calc(100%-145px)] '>
                 {
-                    loaded ? (currentrepos.map((repo) => (
+                    loaded ? (currentRepos.map((repo) => (
                         <div key={repo.name} className='repo py-[24px] cursor-pointer border-b border-[#D5D7DA] hover:bg-[#F5F5F5]'>
                             <div className='one-repo px-[24px] flex flex-col gap-[12px]  '>
                                 <div className='flex gap-[8px] items-center'>
