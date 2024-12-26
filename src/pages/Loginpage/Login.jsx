@@ -6,14 +6,14 @@ import { Signupoptions } from '../../constants/Signups/Signupoptions';
 
 
 function Login() {
-    const [option, setoption] = useState("SAAS");
-    const [currentSignups, setcurrentSignups] = useState(Signupoptions[option]);
+    const [selectedOption, setSelectedOption] = useState("SAAS");
+    const [currentSignups, setCurrentSignups] = useState(Signupoptions[selectedOption]);
     const navigate = useNavigate();
 
 
     const selectOption = (option) => {
-        setoption(option);
-        setcurrentSignups(Signupoptions[option]);
+        setSelectedOption(option);
+        setCurrentSignups(Signupoptions[option]);
     }
 
     const setloggedIn = () => {
@@ -37,8 +37,8 @@ function Login() {
                                     <div className='font-inter font-semibold text-[28px] sm:text-[29px]  lg:text-[32px] leading-[48px]'>Welcome to CodeAnt AI</div>
                                 </div>
                                 <div className='xs:w-[92%] buttons-container  rounded-md border w-[85%] border-[#E9EAEB] mt-[20px] mb-[25px]'>
-                                    <button onClick={() => { selectOption("SAAS") }} className={`${option === "SAAS" ? 'bg-button-color  text-white' : 'bg-white text-grey-variant'}  rounded-[8px] py-[12px] w-1/2 font-inter font-semibold leading-[28px] text-[20px] hover:bg-gray-10`}>SAAS</button>
-                                    <button onClick={() => { selectOption("Self Hosted") }} className={` ${option === "Self Hosted" ? 'bg-button-color text-white' : 'bg-white text-grey-variant'}    rounded-[8px] py-[12px] w-1/2 font-inter font-semibold leading-[28px] text-[20px] hover:bg-gray-10`}>Self Hosted</button>
+                                    <button onClick={() => { selectOption("SAAS") }} className={`${selectedOption === "SAAS" ? 'bg-button-color  text-white' : 'bg-white text-grey-variant'}  rounded-[8px] py-[12px] w-1/2 font-inter font-semibold leading-[28px] text-[20px] hover:bg-gray-10`}>SAAS</button>
+                                    <button onClick={() => { selectOption("Self Hosted") }} className={` ${selectedOption === "Self Hosted" ? 'bg-button-color text-white' : 'bg-white text-grey-variant'}    rounded-[8px] py-[12px] w-1/2 font-inter font-semibold leading-[28px] text-[20px] hover:bg-gray-10`}>Self Hosted</button>
                                 </div>
                             </div>
                             <div className='w-[100%] pt-[20px] pb-[15px] flex justify-center'>

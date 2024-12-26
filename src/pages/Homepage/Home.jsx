@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Reposstore } from '../../contexts/Reposstore';
+import { ReposStoreContext } from '../../contexts/Reposstore';
 import "../../App.css"
 import Sidebar from './components/Sidebar/Sidebar';
 import Repositories from './components/Features/Repositories/Repositories';
@@ -13,22 +13,22 @@ import Support from './components/Features/Support/Support';
 import AicodeReview from './components/Features/CodeReview/AicodeReview';
 
 const Home = () => {
-    const [currentUser, setcurrentUser] = useState("Naveen");
-    const [activeOption, setactiveOption] = useState("Repositories");
-    const [repoactive, setrepoactive] = useState("Add Repository");
+    const [currentUser, setCurrentUser] = useState("Naveen");
+    const [activeOption, setActiveOption] = useState("Repositories");
+    const [repoActive, setRepoActive] = useState("Add Repository");
 
-    const [opennavbar, setopennavbar] = useState(false);
+    const [openNavbar, setOpenNavbar] = useState(false);
     const navigate = useNavigate();
-    const [loaded, setloaded] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     const Repodata = {
         loaded,
-        setloaded,
-        repoactive,
-        setrepoactive,
+        setLoaded,
+        repoActive,
+        setRepoActive,
     }
 
-    const hidemenu = () => {
+    const hideMenu = () => {
         const bar1 = document.getElementById("bar1");
         const bar2 = document.getElementById("bar2");
 
@@ -48,7 +48,7 @@ const Home = () => {
         }
     }
 
-    const showmenu = () => {
+    const showMenu = () => {
         const bar1 = document.getElementById("bar1");
         const bar2 = document.getElementById("bar2");
 
@@ -65,23 +65,23 @@ const Home = () => {
         }
     }
 
-    const navbarhandler = () => {
+    const navbarHandler = () => {
 
-        setopennavbar(!opennavbar);
+        setOpenNavbar(!openNavbar);
 
-        if (!opennavbar) {
-            hidemenu();
+        if (!openNavbar) {
+            hideMenu();
 
         }
         else {
-            showmenu();
+            showMenu();
         }
     }
 
     const hideNavbar = () => {
         if (window.innerWidth < 768) {
-            setopennavbar(false);
-            showmenu();
+            setOpenNavbar(false);
+            showMenu();
         }
     }
 
@@ -89,9 +89,9 @@ const Home = () => {
         const handleClickOutside = (event) => {
             const aside = document.querySelector('aside');
             const navbar = document.querySelector('.menu');
-            if (opennavbar && aside && !aside.contains(event.target) && !navbar.contains(event.target)) {
-                setopennavbar(false);
-                showmenu();
+            if (openNavbar && aside && !aside.contains(event.target) && !navbar.contains(event.target)) {
+                setOpenNavbar(false);
+                showMenu();
             }
         };
 
@@ -99,12 +99,12 @@ const Home = () => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [opennavbar]);
+    }, [openNavbar]);
 
     useEffect(() => {
         if (!loaded) {
             setTimeout(() => {
-                setloaded(true);
+                setLoaded(true);
             }, 1500)
         }
     }, [loaded])
@@ -124,29 +124,29 @@ const Home = () => {
 
 
     return (
-        <Reposstore.Provider value={Repodata}>
+        <ReposStoreContext.Provider value={Repodata}>
             <div className='Home-container z-index:5 w-full relative  h-screen md:flex-row flex flex-col items-center md:items-start  '>
-                <div className={`absolute h-[calc(100%-62px)]  w-full top-[62px] md:hidden bg-[#000000B3]  ${opennavbar ? 'block' : 'hidden'} `}></div>
+                <div className={`absolute h-[calc(100%-62px)]  w-full top-[62px] md:hidden bg-[#000000B3]  ${openNavbar ? 'block' : 'hidden'} `}></div>
                 <div className='xs:w-[92%] w-[95%] md:hidden  flex  justify-between items-center py-[15px]'>
                     <div className='flex items-center   gap-[10px] '>
                         <img className='w-[29px] h-[32px]' src="./Images/codeant_logo_dark.svg" alt="CodeAnt Logo" />
                         <header className=' font-sans-serif font-normal title text-[24px] leading-[27px]  '>CodeAnt AI</header>
                     </div>
-                    <div onClick={() => { navbarhandler() }} className={`menu flex flex-col gap-[5px] cursor-pointer`}>
+                    <div onClick={() => { navbarHandler() }} className={`menu flex flex-col gap-[5px] cursor-pointer`}>
                         <div id="bar1" className='transition-all duration-300 ease-in-out md:w-[24px] md:h-[4px] w-[21px] h-[3px] rounded-full   bg-[#181D27]'></div>
                         <div id="bar2" className='transition-all duration-300 ease-in-out md:w-[24px] md:h-[4px] w-[21px] h-[3px] rounded-full bg-[#181D27]'></div>
                         <div id="bar3" className='transition-all duration-300 ease-in-out md:w-[24px] md:h-[4px] w-[21px] h-[3px] rounded-full bg-[#181D27]'></div>
                     </div>
                 </div>
-                <Sidebar users={users} navbarOptions={navbarOptions} currentUser={currentUser} setcurrentUser={setcurrentUser} activeOption={activeOption} setactiveOption={setactiveOption} opennavbar={opennavbar} setloaded={setloaded} hideNavbar={hideNavbar} />
+                <Sidebar users={users} navbarOptions={navbarOptions} currentUser={currentUser} setCurrentUser={setCurrentUser} activeOption={activeOption} setActiveOption={setActiveOption} openNavbar={openNavbar} setLoaded={setLoaded} hideNavbar={hideNavbar} />
 
-                <div className={`main-content w-full h-[calc(100%-64px)] md:h-full md:w-[calc(100%-240px)] flex justify-center items-center  bg-white ${opennavbar ? ' pointer-events-none' : ''}`}>
+                <div className={`main-content w-full h-[calc(100%-64px)] md:h-full md:w-[calc(100%-240px)] flex justify-center items-center  bg-white ${openNavbar ? ' pointer-events-none' : ''}`}>
                     <Outlet />
 
 
                 </div>
             </div>
-        </Reposstore.Provider>
+        </ReposStoreContext.Provider>
     )
 }
 

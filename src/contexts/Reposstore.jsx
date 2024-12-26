@@ -1,9 +1,9 @@
 import { createContext } from "react";
 
-export const Reposstore = createContext({
+export const ReposStoreContext = createContext({
     loaded: null,
-    setloaded: () => { },
-    repoactive: null,
-    setrepoactive: () => { },
+    setLoaded: () => { },
+    repoActive: null,
+    setRepoActive: () => { },
     repositories: [],
 });
