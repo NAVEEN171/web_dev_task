@@ -10,6 +10,14 @@ const Sidebar = ({ users, navbarOptions, currentUser, setCurrentUser, activeOpti
         navigate(route)
         hideNavbar();
     }
+    const Selectuser = (user) => {
+        setShow(false);
+        setCurrentUser(user);
+        setLoaded(false);
+        if (window.innerWidth < 768) {
+            hideNavbar();
+        }
+    }
 
 
     return (
@@ -26,7 +34,7 @@ const Sidebar = ({ users, navbarOptions, currentUser, setCurrentUser, activeOpti
                         {show && <div className='absolute  top-full mt-[5px] left-0 absolute z-10 w-full mt-1 bg-white rounded-lg shadow-lg border border-gray-20'>
                             {
                                 users.map((user, idx) => (
-                                            <div key={idx} onClick={() => { setShow(false); setCurrentUser(user); setLoaded(false) }} className='text-left py-[10px] md:py-[5px] pl-[10px]'>{user}</div>
+                                            <div key={idx} onClick={() => { Selectuser(user) }} className='text-left py-[10px] md:py-[5px] pl-[10px]'>{user}</div>
                                 ))
                             }
                         </div>}
